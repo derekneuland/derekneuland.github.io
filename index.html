@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>W3.CSS Template</title>
+    <link href="https://unpkg.com/@puzzlelabs/puzzle-glossary@0.1.0/dist/puzzle-glossary/puzzle-glossary.css" type="text/css" rel="stylesheet">
+    <title>derekneuland.ai</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -138,7 +140,7 @@
         <div id="Jane" class="w3-container person">
             <br>
             <h5 class="w3-opacity">Redefining the Term “Lifetime”</h5>
-            <h4><i class="fa fa-clock-o"></i>April 18,2022</h4>
+            <h4><i class="fa fa-clock-o"></i> April 18,2022</h4>
             <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
             <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
             <hr>
@@ -166,7 +168,7 @@
         <div id="John" class="w3-container person">
             <br>
             <h5 class="w3-opacity">Why Gender Neutral Language Matters</h5>
-            <h4><i class="fa fa-clock-o"></i>March 16, 2022</h4>
+            <h4><i class="fa fa-clock-o"></i> March 16, 2022</h4>
             <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
             <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
             <hr>
@@ -248,7 +250,16 @@
         var openTab = document.getElementById("firstTab");
         openTab.click();
     </script>
-
+<highlight-widget api-key="63e17bb4ff56c65cd7cb9625"></highlight-widget>
 </body>
-
+<script type='module'
+    src='https://unpkg.com/@puzzlelabs/puzzle-glossary@0.1.0/dist/puzzle-glossary/puzzle-glossary.esm.js'></script>
+<script>
+    const widget = document.querySelector('highlight-widget');
+    widget.config = {
+        puzzleBranding: true,
+        shareSocialMedia: false,
+        selectors: ['p'],
+    }
+</script>
 </html>
