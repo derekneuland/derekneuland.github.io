@@ -25,6 +25,16 @@
             padding: 16px
         }
     </style>
+<script type='module'
+    src='https://unpkg.com/@puzzlelabs/puzzle-glossary@0.1.0/dist/puzzle-glossary/puzzle-glossary.esm.js'></script>
+<script>
+    const widget = document.querySelector('highlight-widget');
+    widget.config = {
+        puzzleBranding: true,
+        shareSocialMedia: false,
+        selectors: ['p'],
+    }
+</script>
 </head>
 
 <body>
@@ -252,13 +262,4 @@
     </script>
 <highlight-widget api-key="63e17bb4ff56c65cd7cb9625"></highlight-widget>
 </body>
-<script type='module' src='https://unpkg.com/@puzzlelabs/puzzle-glossary@0.1.0/dist/puzzle-glossary/puzzle-glossary.esm.js'></script>
-<script>
-    const widget = document.querySelector('highlight-widget');
-    widget.config = {
-        puzzleBranding: true,
-        shareSocialMedia: false,
-        selectors: ['p'],
-    }
-</script>
 </html>
