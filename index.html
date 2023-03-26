@@ -268,5 +268,39 @@
         openTab.click();
     </script>
 <highlight-widget api-key="63e17bb4ff56c65cd7cb9625"></highlight-widget>
+     <script>
+   const widget = document.querySelector('highlight-widget');
+   widget.config = {
+     puzzleBranding: false,
+     hasMarkAll: true,
+     hasMarkHyperlink: true,
+     callToAction: {
+       text: 'CTA',
+       link: 'https://puzzlelabs.ai',
+     },
+     selectors: ['div.example', 'body', 'nav'],
+     onCopy: (event: MouseEvent, conceptName: string) => {}
+     onHover: (event: Event, conceptName: string) => {}
+     onResourceClick: (event: MouseEvent, conceptName: string, resource: IResource) => { }   
+};
+
+
+   widget.theme = {
+     mode: 'light',
+     marker: {
+       color: '#E7FF57',
+       type: 'highlight',
+     },
+     modal: {
+       backgroundColor: '#E7E8FE',
+       primaryColor: '#000',
+       secondaryColor: '#74747F',
+     },
+     callToAction: {
+       color: '#fff',
+       backgroundColor: '#000',
+     }
+   }
+ </script>
 </body>
 </html>
