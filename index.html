@@ -111,32 +111,32 @@
    <script>
    const widget = document.querySelector('highlight-widget');
    widget.config = {
-     puzzleBranding: true,
+     puzzleBranding: false,
      hasMarkAll: true,
      hasMarkHyperlink: true,
      callToAction: {
-       text: 'Learn More',
+       text: 'Visit Puzzle',
        link: 'https://puzzlelabs.ai',
      },
-     selectors: ['body'],
+     selectors: ['p'],
 };
 
 
    widget.theme = {
      mode: 'light',
      marker: {
-       color: '#34eb8c',
-       type: 'highlight',
+       color: '#9e1c8b',
+       type: 'underline',
      },
        modal: {
-       backgroundColor: '#FFF',
+       backgroundColor: '#dce2f7',
        primaryColor: '#000',
        secondaryColor: '#000',
      },
     
      callToAction: {
        color: '#FFFFFF',
-       backgroundColor: '#000000',
+       backgroundColor: '#9e1c8b',
      }
    }
  </script>
