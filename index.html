@@ -119,21 +119,9 @@
      hasMarkAll: true,
      hasMarkHyperlink: true,
      callToAction: {
-       text: 'Solve Puzzle',
+       text: 'Learn More',
        link: 'https://puzzlelabs.ai',
     },
-     onHover: (event, conceptName) => {
-       posthog.capture('Hover Concept');
-     },
-     onCTAClick: (event, conceptName) => {
-       posthog.capture('CTA Click');
-     },
-     onResourceClick: (event, conceptName, resource) => {
-       posthog.capture('Resource Click');
-     },
-     onCopy: (event, conceptName) => {
-       posthog.capture('Copy Concept');
-     },
      selectors: ['p'],
   
 };
