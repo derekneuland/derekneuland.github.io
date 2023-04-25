@@ -121,10 +121,11 @@
      callToAction: {
        text: 'Solve Puzzle',
        link: 'https://puzzlelabs.ai',
-     },
+    },
+    posthog.capture('Concept Hover',{
       onHover: (event, conceptName) => {
       console.log(event, conceptName);
-    },
+    }},
     onCTAClick: (event, conceptName) => {
       console.log(event, conceptName);
     },
