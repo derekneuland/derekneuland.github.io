@@ -123,7 +123,8 @@
        link: 'https://puzzlelabs.ai',
      },
      selectors: ['p'],
-
+     onHover: (event, conceptName) => {
+     console.log(event, conceptName);
 };
 
 
@@ -145,15 +146,6 @@
      }
    }
  </script>
-<script>
-
-  const widget = document.querySelector('highlight-widget');
-  widget.config = {
-    onHover: (event, conceptName) => {
-      console.log(event, conceptName);
-    }
-  };
-</script>
      
 </body>
 </html>
