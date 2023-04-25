@@ -122,11 +122,20 @@
        text: 'Solve Puzzle',
        link: 'https://puzzlelabs.ai',
     },
-     selectors: ['p'],
-     posthog.capture('onHover')
      onHover: (event, conceptName) => {
-       console.log(event, conceptName);
+       posthog.capture('Hover Concept');
      },
+     onCTAClick: (event, conceptName) => {
+       posthog.capture('CTA Click');
+     },
+     onResourceClick: (event, conceptName, resource) => {
+       posthog.capture('Resource Click');
+     },
+     onCopy: (event, conceptName) => {
+       posthog.capture('Copy Concept');
+     },
+     selectors: ['p'],
+  
 };
    widget.theme = {
      mode: 'light',
