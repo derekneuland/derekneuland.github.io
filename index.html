@@ -123,9 +123,10 @@
        link: 'https://puzzlelabs.ai',
     },
      selectors: ['p'],
+     posthog.capture('onHover',{
      onHover: (event, conceptName) => {
        console.log(event, conceptName);
-     },
+     }},
 };
    widget.theme = {
      mode: 'light',
