@@ -1,1 +1,1 @@
-# personal-website
+# sonderghost - public terminal
