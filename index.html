@@ -1,35 +1,224 @@
-<!DOCTYPE html>
-<html lang="en-us" class="" data-react-helmet="lang">
+<!doctype html>
+<html lang="en" data-theme="crt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>sonderghost — s/t CD — Pre‑Order</title>
+    <meta name="description" content="Pre‑order the sonderghost self‑titled CD. $10 + shipping. Limited run." />
+    <meta name="theme-color" content="#0a0d0a" />
 
-<head>
-    <title>sonderghost.xyz</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=5.0">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Open Graph / Twitter (replace cover.jpg if you use a different path) -->
+    <meta property="og:title" content="sonderghost — s/t CD — Pre‑Order" />
+    <meta property="og:description" content="$10 + shipping. Minimal site. Album cover hero." />
+    <meta property="og:image" content="cover.jpg" />
+    <meta property="og:type" content="website" />
+
     <style>
-        html,
-        body,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-family: "IBM Plex Sans", sans-serif  
-        }
+      /* --- Base / Resets --- */
+      *, *::before, *::after { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body { margin: 0; }
+      img { max-width: 100%; display: block; }
+      button { font: inherit; }
+      a { color: inherit; }
 
-        .w3-bar-block .w3-bar-item {
-            padding: 16px
-        }
+      /* --- Theme Tokens --- */
+      :root {
+        --bg: #0b0d0c;           /* CRT dark */
+        --fg: #dbffe0;           /* mint white */
+        --fg-dim: #a6c9ad;       /* dim text */
+        --accent: #b8ffb8;       /* green */
+        --shadow: 0 6px 24px rgba(0,0,0,.45);
+        --radius: 20px;
+        --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+      [data-theme="doc"] {
+        --bg: #ffffff;           /* Word doc */
+        --fg: #111111;           /* black */
+        --fg-dim: #3d3d3d;       /* dim */
+        --accent: #111111;       /* black accents */
+      }
+
+      /* --- Layout --- */
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-mono);
+        line-height: 1.5;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 48px auto 80px;
+        padding: 0 20px;
+        position: relative;
+      }
+
+      /* Subtle CRT scanline effect only in CRT theme */
+      [data-theme="crt"] .wrap::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: repeating-linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.06) 0,
+          rgba(255,255,255,0.06) 1px,
+          transparent 2px,
+          transparent 3px
+        );
+        mix-blend-mode: overlay;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .mark {
+        font-weight: 700;
+        letter-spacing: .03em;
+        text-transform: lowercase;
+      }
+      .theme-toggle {
+        background: transparent;
+        border: 1px solid var(--fg-dim);
+        border-radius: 999px;
+        padding: 6px 12px;
+        color: var(--fg);
+        cursor: pointer;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+        align-items: center;
+      }
+      .hero-img {
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .hero-copy h1 {
+        font-size: clamp(28px, 3.6vw, 44px);
+        margin: 0 0 10px;
+      }
+      .hero-copy p { margin: 0 0 16px; color: var(--fg-dim); }
+      .price { font-size: 18px; margin: 6px 0 18px; }
+
+      .cta {
+        display: grid;
+        gap: 12px;
+        align-items: start;
+        max-width: 520px;
+      }
+      .note {
+        font-size: 14px;
+        color: var(--fg-dim);
+      }
+
+      .divider { margin: 36px 0; border: 0; height: 1px; background: currentColor; opacity: .15; }
+
+      .wholesale {
+        font-size: 14px;
+        padding: 12px 14px;
+        border: 1px dashed var(--fg-dim);
+        border-radius: 12px;
+      }
+
+      footer {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 13px;
+        color: var(--fg-dim);
+      }
+
+      @media (max-width: 840px) {
+        .hero { grid-template-columns: 1fr; }
+      }
     </style>
-</head>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="mark">sonderghost.xyz</div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">CRT ▸ Word</button>
+      </header>
 
-<body>
+      <section class="hero" aria-labelledby="t">
+        <div class="hero-img">
+          <!-- Replace cover.jpg with your actual path/filename -->
+          <img src="cover.jpg" alt="sonderghost — self‑titled album cover" />
+        </div>
+        <div class="hero-copy">
+          <h1 id="t">sonderghost — s/t CD (Pre‑Order)</h1>
+          <div class="price">$10 + shipping</div>
+          <p>
+            Minimal packaging. Limited run. Ships <span id="shipDate">soon</span>.
+          </p>
 
-            <a href="https://bandmcnally.com">bandmcnally.com</a>
-            <a href="https://linktr.ee/sonderghost">linktree</a>
-            <a href="https://www.instagram.com/sonderghost/">instagram</a>
+          <!--
+            STRIPE BUY BUTTON
+            1) In Stripe Dashboard: Products → Add product → Create $10 price.
+            2) Click “Get paid” → “Buy button” and generate a Buy Button for this product.
+            3) Copy your publishable key + Buy Button ID into the attributes below.
+            4) In the Payment Link settings, enable shipping address collection and add shipping rates.
+            5) Apple Pay will appear automatically if your domain is verified in Stripe.
+          -->
+          <div class="cta">
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+            <stripe-buy-button
+              buy-button-id="buy_btn_REPLACE_ME"
+              publishable-key="pk_live_OR_TEST_REPLACE_ME">
+            </stripe-buy-button>
 
-                 
+            <p class="note">
+              Prefer PayPal/Venmo? Email <a href="mailto:derekneuland@gmail.com">derekneuland@gmail.com</a> for a manual invoice.
+            </p>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <hr class="divider" />
+
+      <section class="wholesale">
+        <strong>ATTN: record stores & music distributors</strong> — email
+        <a href="mailto:derekneuland@gmail.com">derekneuland@gmail.com</a> for wholesale pricing.
+      </section>
+
+      <footer>
+        <div>© <span id="y"></span> sonderghost</div>
+        <div>
+          <a href="/" aria-label="Home">Home</a>
+          <span aria-hidden="true">·</span>
+          <a href="#t">Top</a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Theme toggle + persistence
+      const root = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const saved = localStorage.getItem('theme');
+      if (saved) root.setAttribute('data-theme', saved);
+      toggle.addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'crt' ? 'doc' : 'crt';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        toggle.textContent = next === 'crt' ? 'CRT ▸ Word' : 'Word ▸ CRT';
+      });
+      toggle.textContent = root.getAttribute('data-theme') === 'crt' ? 'CRT ▸ Word' : 'Word ▸ CRT';
+
+      // Year + optional ship date string — edit if you want a specific date
+      document.getElementById('y').textContent = new Date().getFullYear();
+      // Example: document.getElementById('shipDate').textContent = 'Aug 30, 2025';
+    </script>
+  </body>
 </html>
