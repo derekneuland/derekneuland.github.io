@@ -160,14 +160,17 @@
       <section class="hero" aria-labelledby="t">
         <div class="hero-img">
           <!-- Replace cover.jpg with your actual path/filename -->
-          <img src="cover.png" alt="sonderghost — self-titled album cover" />
+          <img src="cover.jpg" alt="sonderghost — self‑titled album cover" />
         </div>
         <div class="hero-copy">
-          <h1 id="t">sonderghost — s/t CD (Pre-Order)</h1>
+          <h1 id="t">sonderghost — s/t CD (Pre‑Order)</h1>
           <div class="price">$10 + shipping</div>
           <p>
-            Minimal packaging. Limited run. Ships <span id="shipDate">soon</span>.
-          </p>
+            $1
+
+            <p class="note">
+              Pre‑order. Ships by <span id="shipBy">TBD</span>. Refunds honored until ship date.
+            </p>
 
           <!--
             STRIPE BUY BUTTON
@@ -199,7 +202,7 @@
       </section>
 
       <footer>
-        <div>© <span id="y"></span> sonderghost</div>
+        <div>© <span id="y"></span> sonderghost · Sold by <strong>UTCA259 LLC</strong> · support: <a href="mailto:derek@utca259.com">derek@utca259.com</a></div>
         <div>
           <a href="/" aria-label="Home">Home</a>
           <span aria-hidden="true">·</span>
@@ -225,6 +228,7 @@
       // Year + optional ship date string — edit if you want a specific date
       document.getElementById('y').textContent = new Date().getFullYear();
       // Example: document.getElementById('shipDate').textContent = 'Aug 30, 2025';
+      // Example: document.getElementById('shipBy').textContent = 'Aug 30, 2025';
     </script>
   </body>
 </html>
