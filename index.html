@@ -211,7 +211,7 @@
         const next = root.getAttribute('data-theme') === 'crt' ? 'doc' : 'crt';
         root.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
-        toggle.textContent = next === 'crt' ? 'Day ▸ Night' : 'Night ▸ Day';
+        toggle.textContent = next === 'crt' ? 'Night ▸ Day' : 'Day ▸ Night';
       });
       toggle.textContent = root.getAttribute('data-theme') === 'crt' ? 'Night ▸ Day' : 'Day ▸ Night';
 
