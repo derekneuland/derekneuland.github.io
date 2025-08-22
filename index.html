@@ -211,9 +211,9 @@
         const next = root.getAttribute('data-theme') === 'crt' ? 'doc' : 'crt';
         root.setAttribute('data-theme', next);
         localStorage.setItem('theme', next);
-        toggle.textContent = next === 'crt' ? 'CRT ▸ Word' : 'Word ▸ CRT';
+        toggle.textContent = next === 'crt' ? 'Day ▸ Night' : 'Night ▸ Day';
       });
-      toggle.textContent = root.getAttribute('data-theme') === 'crt' ? 'CRT ▸ Word' : 'Word ▸ CRT';
+      toggle.textContent = root.getAttribute('data-theme') === 'crt' ? 'Night ▸ Day' : 'Day ▸ Night';
 
       // Year + optional ship date string — edit if you want a specific date
       document.getElementById('y').textContent = new Date().getFullYear();
